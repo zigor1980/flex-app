@@ -1,11 +1,16 @@
 // set your account sid here
-var accountSid = "AC...";
+var accountSid = 'AC...';
 
+// your runtime domain
+const serviceBaseUrl = 'http://localhost:8080';
 
 var appConfig = {
-  // Uncomment the following lines to enable automatic log in
-  //
-  // sso: {
-  //   accountSid: accountSid
-  // }
+  serviceBaseUrl: `${serviceBaseUrl}/`,
+  sso: {
+      accountSid,
+      tokenizerUrl: `${serviceBaseUrl}/tokenizer`,
+  },
+  ytica: false,
+  logLevel: 'debug',
+  showSupervisorDesktopView: true,
 }
